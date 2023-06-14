@@ -1,0 +1,6 @@
+.bg-hero-image {
+    background-image: url('../assets/hero.svg')
+}
+.bg-image-blur {
+    filter: blur(8px);
+}

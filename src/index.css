@@ -1,13 +1,19 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: "Gotham-thin";
+  src: url("../public/fonts/Gotham-Font/Gotham-Thin.otf");
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: "Gotham-bold";
+  src: url("../public/fonts/Gotham-Font/Gotham-Bold.otf");
+}
+@font-face {
+  font-family: "Gotham-light";
+  src: url("../public/fonts/Gotham-Font/Gotham-Light.otf");
+}
+@font-face {
+  font-family: "Gotham-book";
+  src: url("../public//fonts/Gotham-Font/GothamBook.ttf");
 }
