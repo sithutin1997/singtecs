@@ -50,7 +50,7 @@ const DropDownMenu = ({show = false}) => {
           }
         }
       }}
-      className={visible ? `absolute w-full bg-black right-0 z-10 mt-12 h-1/3 flex flex-row ps-32 py-8 space-x-12` : `hidden`}>
+      className={visible ? `absolute top-12 w-full bg-black right-0 z-10 mt-12 h-1/3 flex flex-row ps-32 py-8 space-x-12` : `hidden`}>
       <motion.div className='flex flex-col text-left mt-8 me-12 space-y-4'>
         <motion.span variants={itemVariants} className='text-xl text-white font-gotham-light'>Custom Web & Mobile Development</motion.span>
         <motion.span variants={itemVariants} className='text-xl text-white font-gotham-light'>Digital Transformation</motion.span>
