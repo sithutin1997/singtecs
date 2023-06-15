@@ -16,9 +16,17 @@ const AboutUsPage = () => {
   const [bg,setBg] = useState(false)
 
   return (
-    <div className='bg-about-image bg-auto bg-no-repeat h-[640px] px-14'>
-      <Header setShow={backgroundBlur}/>
-      <AboutUsLanding />
+    <div>
+      <div className='bg-about-image bg-auto bg-no-repeat px-14'>
+        <Header setShow={backgroundBlur}/>
+        <AboutUsLanding />
+      </div>
+
+      {/* <div className="bg-meet-image bg-auto bg-no-repeat mt-10">
+        <MeetTeam />
+      </div> */}
+
+        
       <MeetTeam />
       <Footer />
     </div>
