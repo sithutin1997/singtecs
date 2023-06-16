@@ -5,7 +5,7 @@ import linkedin from '../../assets/foot-linkedin.svg'
 
 const Footer = () => {
   return (
-    <div className='flex flex-row mx-24 my-36 space-x-36'>
+    <div className='flex flex-row mx-24 mt-20 mb-36 space-x-36'>
       <div className='flex flex-col space-y-4'>
         <h1 className='font-gotham-bold text-left'>Our Services</h1>
         <div className='flex flex-row space-x-4'>

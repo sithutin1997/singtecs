@@ -33,7 +33,7 @@ const WeOffer = () => {
       whileInView="onscreen"
       viewport={{ once: false, amount: 0.2 }}
       animate={{ x: 0 }}
-      className='flex flex-col mx-24 py-14'>
+      className='flex flex-col mx-14 py-14'>
         <h1 className='text-4xl font-gotham-light font-bold text-left mb-14'>What we offer</h1>
         <div className='flex flex-col space-y-2'>
             <div className='flex flex-row space-x-7 mb-10'>
@@ -88,7 +88,7 @@ const WeOffer = () => {
             </div>
         </div>
         <div className='flex flex-col space-y-2'>
-            <div className='flex flex-row space-x-7'>
+            <div className='flex flex-row space-x-7 mb-10'>
                 <motion.div variants={cardVariants} className='flex flex-col space-y-1'>
                 <img src={cyber} alt="" />
                 <div className='flex flex-row justify-between'>

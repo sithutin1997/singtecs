@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import {motion} from 'framer-motion'
 
-const DropDownMenu = ({show = false}) => {
+const DropDownMenu = ({show}) => {
   const itemVariants = {
     open: {
       opacity: 1,
@@ -12,22 +12,30 @@ const DropDownMenu = ({show = false}) => {
   }
   const [visible, setVisible] = useState(false)
 
-  useEffect(() => {
-    if(show == false) {
-      setTimeout(() => {
-        setVisible(false)
-      }, 300);
+  const handleMouseEnter = (value) => {
+    if(show == false && value == false) {
+      setVisible(false)
     } else {
       setVisible(true)
     }
-    console.log(show)
-  }, [show])
+  }
+
+  // useEffect(() => {
+  //   if(show == false) {
+  //     setTimeout(() => {
+  //       setVisible(false)
+  //     }, 300);
+  //   } else {
+  //     setVisible(true)
+  //   }
+  //   console.log(show)
+  // }, [show])
   
   return (
     <motion.div 
       initial={false}
       animate={show ? 'open' : 'closed'}
-      onMouseEnter={()=> setVisible(true)}
+      onMouseEnter={handleMouseEnter(true)} onMouseLeave={handleMouseEnter(false)} 
       variants={{
         open: {
           opacity: 1,
@@ -50,7 +58,7 @@ const DropDownMenu = ({show = false}) => {
           }
         }
       }}
-      className={visible ? `absolute top-12 w-full bg-black right-0 z-10 mt-12 h-1/3 flex flex-row ps-32 py-8 space-x-12` : `hidden`}>
+      className={visible ? `absolute top-12 w-full bg-black right-0 z-10 mt-12 h-2/5 flex flex-row ps-32  py-8 space-x-12` : `hidden`}>
       <motion.div className='flex flex-col text-left mt-8 me-12 space-y-4'>
         <motion.span variants={itemVariants} className='text-xl text-white font-gotham-light'>Custom Web & Mobile Development</motion.span>
         <motion.span variants={itemVariants} className='text-xl text-white font-gotham-light'>Digital Transformation</motion.span>

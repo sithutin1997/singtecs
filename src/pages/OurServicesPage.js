@@ -15,12 +15,12 @@ const OurServices = () => {
     const [bg,setBg] = useState(false)
     return (
       <div>
-        <div className={`bg-service-image object-scale-down bg-auto bg-right-top bg-no-repeat h-[640px] px-14`}>
+        <div className={`bg-service-image object-scale-down bg-auto bg-right-top bg-no-repeat h-[500px] px-14`}>
           <Header setShow={backgroundBlur} />
           <OurServicesLanding/>
         </div>
         <WeOffer />
-        < div className={`relative bg-quality-image object-scale-down bg-top bg-auto bg-no-repeat h-[640px] px-14`}>
+        < div className={`relative bg-quality-image object-scale-down bg-top bg-auto bg-no-repeat h-[560px] px-14`}>
           <QualityLanding />
         </div>
         <Footer />
