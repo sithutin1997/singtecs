@@ -1,0 +1,37 @@
+.bg-custom-service-page {
+  background-image: url('../assets/custom-page.png');
+}
+
+.bg-digital-service-page {
+  background-image: url('../assets/digital-page.png');
+}
+
+.bg-cx-service-page {
+  background-image: url('../assets/cx-page.png');
+}
+.bg-iot-service-page {
+  background-image: url('../assets/iot-page.png');
+}
+
+.bg-cyber-service-page {
+  background-image: url('../assets/cyber-page.png');
+}
+
+.bg-it-service-page {
+  background-image: url('../assets/it-page.png');
+}
+
+.bg-enterprise-service-page {
+  background-image: url('../assets/enterprise-page.png');
+}
+
+.bg-diet-service-page {
+  background-image: url('../assets/diet-page.png');
+}
+
+    /* cx : "",
+    iot : "",
+    cyber : "",
+    it : "",
+    enterprise : "",
+    diet : "" */
