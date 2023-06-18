@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import {motion} from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 const DropDownMenu = ({show}) => {
   const itemVariants = {
@@ -11,14 +12,14 @@ const DropDownMenu = ({show}) => {
     closed: { opacity: 0, y: 20, transition: { duration: 0.2 } }
   }
   const [visible, setVisible] = useState(false)
+  const [isOnDropDown, setIsDropDown] = useState(false)
 
   useEffect(() => {
     handleMouseEnter()
-  }, [show])
+  }, [show,isOnDropDown])
 
-
-  const handleMouseEnter = (value) => {
-   if (show == false && value == false) {
+  const handleMouseEnter = () => {
+    if(isOnDropDown == false && show == false) {
       setVisible(false)
     } else {
       setVisible(true)
@@ -28,7 +29,7 @@ const DropDownMenu = ({show}) => {
   
   return (
       <motion.div 
-        onMouseEnter={()=> handleMouseEnter(true)} onMouseLeave={()=> handleMouseEnter(false)}
+        onMouseEnter={()=> setIsDropDown(true)} onMouseLeave={()=> setIsDropDown(false)}
         animate= {visible ? 'open' : 'closed'}
         initial={false}
         variants={{
@@ -55,16 +56,16 @@ const DropDownMenu = ({show}) => {
         }}
         className={visible ? `absolute top-12 w-full bg-black right-0 z-10 mt-6 h-2/5 flex flex-row ps-32  py-8 space-x-12` : `hidden`}>
         <motion.div className='flex flex-col text-left mt-8 me-12 space-y-4'>
-          <motion.span variants={itemVariants} className='text-xl text-white font-gotham-light'>Custom Web & Mobile Development</motion.span>
-          <motion.span variants={itemVariants} className='text-xl text-white font-gotham-light'>Digital Transformation</motion.span>
-          <motion.span variants={itemVariants} className='text-xl text-white font-gotham-light'>CX/UX Engineering</motion.span>
-          <motion.span variants={itemVariants} className='text-xl text-white font-gotham-light'>IoT and Cloud Computing</motion.span>
+          <motion.span variants={itemVariants} className='text-xl text-white font-poppin-light'><Link to={"/ourservices/custom"}>Custom Web & Mobile Development</Link></motion.span>
+          <motion.span variants={itemVariants} className='text-xl text-white font-poppin-light'><Link to={"/ourservices/digital"}>Digital Transformation</Link></motion.span>
+          <motion.span variants={itemVariants} className='text-xl text-white font-poppin-light'><Link to={"/ourservices/cx"}>CX/UX Engineering</Link></motion.span>
+          <motion.span variants={itemVariants} className='text-xl text-white font-poppin-light'><Link to={"/ourservices/iot"}>IoT and Cloud Computing</Link></motion.span>
         </motion.div>
         <motion.div className='flex flex-col text-left mt-8 space-y-4'>
-          <motion.span variants={itemVariants} className='text-xl text-white font-gotham-light'>Cyber Security</motion.span>
-          <motion.span variants={itemVariants} className='text-xl text-white font-gotham-light'>IT Consultancy</motion.span>
-          <motion.span variants={itemVariants} className='text-xl text-white font-gotham-light'>Enterprise Service</motion.span>
-          <motion.span variants={itemVariants} className='text-xl text-white font-gotham-light'>Online Diet Consultant</motion.span>
+          <motion.span variants={itemVariants} className='text-xl text-white font-poppin-light'><Link to={"/ourservices/cyber"}>Cyber Security</Link></motion.span>
+          <motion.span variants={itemVariants} className='text-xl text-white font-poppin-light'><Link to={"/ourservices/it"}>IT Consultancy</Link></motion.span>
+          <motion.span variants={itemVariants} className='text-xl text-white font-poppin-light'><Link to={"/ourservices/enterprise"}>Enterprise Service</Link></motion.span>
+          <motion.span variants={itemVariants} className='text-xl text-white font-poppin-light'><Link to={"/ourservices/diet"}>Online Diet Consultant</Link></motion.span>
         </motion.div>
       </motion.div>
     

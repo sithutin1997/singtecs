@@ -9,6 +9,7 @@ import enterprise from '../../assets/EnterpriseService.png'
 import online from '../../assets/OnlineDietConsultant.png'
 
 import {motion} from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 const WeOffer = () => {
 
@@ -34,18 +35,18 @@ const WeOffer = () => {
       viewport={{ once: false, amount: 0.2 }}
       animate={{ x: 0 }}
       className='flex flex-col mx-14 py-14'>
-        <h1 className='text-4xl font-gotham-light font-bold text-left mb-14'>What we offer</h1>
+        <h1 className='text-4xl font-poppin-light font-bold text-left mb-14'>What we offer</h1>
         <div className='flex flex-col space-y-2'>
             <div className='flex flex-row space-x-7 mb-10'>
                 <motion.div variants={cardVariants} className='flex flex-col space-y-1'>
                     <img src={custom} alt="" />
                     <div className='flex flex-row justify-between'>
                         <div className='flex flex-col space-y-1'>
-                            <p className='font-gotham-bold text-left'>Custom Web & </p>
-                            <p className='font-gotham-bold text-left'>Mobile Development</p>
+                            <p className='font-poppin-bold text-left'>Custom Web & </p>
+                            <p className='font-poppin-bold text-left'>Mobile Development</p>
                         </div>
                         <div className='mt-1'>
-                            <button className='bg-transparent text-black text-xs py-1 px-1 border border-black rounded w-[5rem] font-gotham-bold'>Learn More</button>
+                            <button className='bg-transparent text-black text-xs py-1 px-1 border border-black rounded w-[5rem] font-poppin-bold'><Link to={"/ourservices/custom"}>Learn More</Link></button>
                         </div>
                     </div>
                 </motion.div>
@@ -53,11 +54,11 @@ const WeOffer = () => {
                     <img src={digital} alt="" />
                     <div className='flex flex-row justify-between'>
                         <div className='flex flex-col space-y-1'>
-                            <p className='font-gotham-bold text-left'>Digital</p>
-                            <p className='font-gotham-bold text-left'>Transformation</p>
+                            <p className='font-poppin-bold text-left'>Digital</p>
+                            <p className='font-poppin-bold text-left'>Transformation</p>
                         </div>
                         <div className='mt-1'>
-                            <button className='bg-transparent text-black text-xs py-1 px-1 border border-black rounded w-[5rem] font-gotham-bold'>Learn More</button>
+                            <button className='bg-transparent text-black text-xs py-1 px-1 border border-black rounded w-[5rem] font-poppin-bold'><Link to={"/ourservices/digital"}>Learn More</Link></button>
                         </div>
                     </div>
                 </motion.div>
@@ -65,11 +66,11 @@ const WeOffer = () => {
                     <img src={cx} alt="" />
                     <div className='flex flex-row justify-between'>
                         <div className='flex flex-col space-y-1'>
-                            <p className='font-gotham-bold text-left'>CX/UX </p>
-                            <p className='font-gotham-bold text-left'>Engineering</p>
+                            <p className='font-poppin-bold text-left'>CX/UX </p>
+                            <p className='font-poppin-bold text-left'>Engineering</p>
                         </div>
                         <div className='mt-1'>
-                            <button className='bg-transparent text-black text-xs py-1 px-1  border border-black rounded w-[5rem] font-gotham-bold'>Learn More</button>
+                            <button className='bg-transparent text-black text-xs py-1 px-1  border border-black rounded w-[5rem] font-poppin-bold'><Link to={"/ourservices/cx"}>Learn More</Link></button>
                         </div>
                     </div>
                 </motion.div>
@@ -77,11 +78,11 @@ const WeOffer = () => {
                     <img src={iot} alt="" />
                     <div className='flex flex-row justify-between'>
                         <div className='flex flex-col space-y-1'>
-                            <p className='font-gotham-bold text-left'>IoT and Cloud</p>
-                            <p className='font-gotham-bold text-left'>Computing</p>
+                            <p className='font-poppin-bold text-left'>IoT and Cloud</p>
+                            <p className='font-poppin-bold text-left'>Computing</p>
                         </div>
                         <div className='mt-1'>
-                            <button className='bg-transparent text-black text-xs py-1 px-1 border border-black rounded w-[5rem] font-gotham-bold'>Learn More</button>
+                            <button className='bg-transparent text-black text-xs py-1 px-1 border border-black rounded w-[5rem] font-poppin-bold'><Link to={"/ourservices/iot"}>Learn More</Link></button>
                         </div>
                     </div>
                 </motion.div>
@@ -93,11 +94,11 @@ const WeOffer = () => {
                 <img src={cyber} alt="" />
                 <div className='flex flex-row justify-between'>
                     <div className='flex flex-col space-y-1'>
-                        <p className='font-gotham-bold text-left'>Cyber</p>
-                        <p className='font-gotham-bold text-left'>Security</p>
+                        <p className='font-poppin-bold text-left'>Cyber</p>
+                        <p className='font-poppin-bold text-left'>Security</p>
                     </div>
                     <div className='mt-1'>
-                        <button className='bg-transparent text-black text-xs py-1 px-1 border border-black rounded w-[5rem] font-gotham-bold'>Learn More</button>
+                        <button className='bg-transparent text-black text-xs py-1 px-1 border border-black rounded w-[5rem] font-poppin-bold'><Link to={"/ourservices/cyber"}>Learn More</Link></button>
                     </div>
                 </div>
                 </motion.div>
@@ -105,11 +106,11 @@ const WeOffer = () => {
                     <img src={it} alt="" />
                     <div className='flex flex-row justify-between'>
                         <div className='flex flex-col space-y-1'>
-                            <p className='font-gotham-bold text-left'>IT</p>
-                            <p className='font-gotham-bold text-left'>Consultancy</p>
+                            <p className='font-poppin-bold text-left'>IT</p>
+                            <p className='font-poppin-bold text-left'>Consultancy</p>
                         </div>
                         <div className='mt-1'>
-                            <button className='bg-transparent text-black text-xs py-1 px-1 border border-black rounded w-[5rem] font-gotham-bold'>Learn More</button>
+                            <button className='bg-transparent text-black text-xs py-1 px-1 border border-black rounded w-[5rem] font-poppin-bold'><Link to={"/ourservices/it"}>Learn More</Link></button>
                         </div>
                     </div>
                     
@@ -118,11 +119,11 @@ const WeOffer = () => {
                     <img src={enterprise} alt="" />
                     <div className='flex flex-row justify-between'>
                         <div className='flex flex-col space-y-1'>
-                            <p className='font-gotham-bold text-left'>Enterprise </p>
-                            <p className='font-gotham-bold text-left'>Service</p>
+                            <p className='font-poppin-bold text-left'>Enterprise </p>
+                            <p className='font-poppin-bold text-left'>Service</p>
                         </div>
                         <div className='mt-1'>
-                            <button className='bg-transparent text-black text-xs py-1 px-1 border border-black rounded w-[5rem] font-gotham-bold'>Learn More</button>
+                            <button className='bg-transparent text-black text-xs py-1 px-1 border border-black rounded w-[5rem] font-poppin-bold'><Link to={"/ourservices/enterprise"}>Learn More</Link></button>
                         </div>
                     </div>
                 </motion.div>
@@ -130,11 +131,11 @@ const WeOffer = () => {
                     <img src={online} alt="" />
                     <div className='flex flex-row justify-between'>
                         <div className='flex flex-col space-y-1'>
-                            <p className='font-gotham-bold text-left'>Online Diet</p>
-                            <p className='font-gotham-bold text-left'>Consultant</p>
+                            <p className='font-poppin-bold text-left'>Online Diet</p>
+                            <p className='font-poppin-bold text-left'>Consultant</p>
                         </div>
                         <div className='mt-1'>
-                            <button className='bg-transparent text-black text-xs py-1 px-1 border border-black rounded w-[5rem] font-gotham-bold'>Learn More</button>
+                            <button className='bg-transparent text-black text-xs py-1 px-1 border border-black rounded w-[5rem] font-poppin-bold'><Link to={"/ourservices/diet"}>Learn More</Link></button>
                         </div>
                     </div>
                 </motion.div>

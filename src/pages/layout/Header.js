@@ -5,14 +5,18 @@ import linkedin from '../../assets/linkedin.svg'
 import facebook from '../../assets/facebook.svg'
 import whatsapp from '../../assets/whatsapp.svg'
 import DropDownMenu from '../../components/DropDownMenu'
-import { useState } from 'react'
-import { useLocation,Link } from 'react-router-dom'
-import white from '../../assets/white-logo.svg'
+import { useState,useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 const Header = ({setShow}) => {
   
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
+  const [isMenu, setIsMenu] = useState(false);
 
+  useEffect(() => {
+    handleMouseEnter(isMenu)
+  }, [isMenu])
+  
   const handleMouseEnter = ( value ) => {
     setIsDropdownVisible(value)
   }
@@ -27,12 +31,12 @@ const Header = ({setShow}) => {
         </div>
         <div className='w-1/2'>
           <div className="flex flex-row justify-center gap-x-10 ">
-            <Link to={"/about"} className='text-white font-gotham-book cursor-pointer'>About Us</Link>
+            <Link to={"/about"} className='text-white font-poppin-book cursor-pointer'>About Us</Link>
 
-            <Link to={"/ourservices"} className='relative text-white font-gotham-book cursor-pointer' onMouseEnter={()=>handleMouseEnter(true)} onMouseLeave={()=>handleMouseEnter(false)}>Our Services</Link>
+            <Link to={"/ourservices"} className='relative text-white font-poppin-book cursor-pointer' onMouseEnter={()=>handleMouseEnter(true)} onMouseLeave={()=>handleMouseEnter(false)}>Our Services</Link>
             <DropDownMenu show={isDropdownVisible}/>
 
-            <Link to={"/getintouch"} className='text-white font-gotham-book cursor-pointer'>Get a free quote</Link>
+            <Link to={"/getintouch"} className='text-white font-poppin-book cursor-pointer'>Get a free quote</Link>
             <img src={facebook} alt="" className='object-scale-down'/>
             <img src={whatsapp} alt="" className='object-scale-down'/>
             <img src={linkedin} alt="" className='object-scale-down'/>

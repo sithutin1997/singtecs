@@ -11,7 +11,7 @@ const Clients = () => {
   return (
     <div className='bg-world-image bg-auto bg-right-top bg-no-repeat shadow-md mx-24'>
       <div className='flex flex-col p-14 space-y-16'>
-        <h1 className='text-4xl font-gotham-light w-2/3 text-left'>Our reputation is built on creating great outcomes for our clients</h1>
+        <h1 className='text-4xl font-poppin font-bold w-2/3 text-left'>Our reputation is built on creating great outcomes for our clients</h1>
         <div className='flex flex-col space-y-10'>
           <div className='flex flex-row space-x-28'>
             <img src={auth} alt="" />

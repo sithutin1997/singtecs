@@ -37,21 +37,21 @@ const Landing = ({showClass}) => {
       initial="offscreen"
       whileInView="onscreen"
       animate={{ opacity: 1 }}
-      className='text-6xl text-left font-gotham-book'>We are {allLetters[letterIndex]}</motion.h1>
+      className='text-7xl text-left font-black font-poppin'>We are {allLetters[letterIndex]}</motion.h1>
 
       <motion.p  viewport={{ once: false, amount: 0.2 }} 
       variants={cardVariants}
       initial="offscreen"
       whileInView="onscreen"
       animate={{ opacity: 1 }}
-      className='text-left w-3/4 font-thin font-gotham-thin'>Welcome to Singtechnologies, where we believe that true success comes from empowering our clients with the right expertise and knowledge. We are not just a tech consultancy; we are your partners in growth, providing you with the tools and guidance you need to succeed in the long term.</motion.p>
+      className='text-left w-3/4 font-light font-poppin font-thin'>Welcome to Singtechnologies, where we believe that true success comes from empowering our clients with the right expertise and knowledge. We are not just a tech consultancy; we are your partners in growth, providing you with the tools and guidance you need to succeed in the long term.</motion.p>
 
       <motion.button  viewport={{ once: false, amount: 0.2 }}
       variants={cardVariants}
       initial="offscreen"
       whileInView="onscreen"
       animate={{ opacity: 1 }}
-      className='bg-transparent text-black py-2 px-4 border border-black rounded w-[8rem] font-gotham-bold'>About us</motion.button>
+      className='bg-transparent text-black py-2 px-4 border border-black rounded w-[8rem] font-poppin-bold'>About us</motion.button>
     </div>
   )
 }
