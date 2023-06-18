@@ -1,4 +1,3 @@
-import React from 'react'
 import cx from '../../assets/cx-illu.svg'
 import { useParams } from 'react-router-dom'
 import CustomLeftBody from '../ServiceLeftBody/CustomLeftBody'
@@ -9,7 +8,7 @@ import CyberLeftBody from '../ServiceLeftBody/CyberLeftBody'
 import ItLeftBody from '../ServiceLeftBody/ItLeftBody'
 import EnterpriseLeftBody from '../ServiceLeftBody/EnterpriseLeftBody'
 
-const ServiceDetail = ({header, rightBody}) => {
+const ServiceDetail = ({header, rightBody = []}) => {
 
   const { service } = useParams()
   return (

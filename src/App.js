@@ -1,6 +1,6 @@
 import './App.css';
 import FrontPage from './pages/FrontPage';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AboutUsPage from './pages/AboutUsPage';
 import GetInTouch from './pages/GetInTouch';
 import OurServices from './pages/OurServicesPage';
@@ -16,7 +16,8 @@ function App() {
         <Route path='/getintouch' element={<GetInTouch />} />
         <Route path='/ourservices' element={<OurServices />} />
         <Route path='/ourservices/:service' element={<ServiceDetailPage />} />
-        <Route path="*" element={<NotFoundPage />} />
+        <Route path="/notfound" element={<NotFoundPage />} />
+        <Route path="*" element={<NotFoundPage />}/>
       </Routes>
     </Router>
   );

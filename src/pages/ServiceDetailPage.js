@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Header from './layout/Header'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import './ServiceDetailPage.css'
 import Footer from './layout/Footer'
 import ServiceLanding from '../components/LandingComponents/ServiceLanding'
@@ -8,6 +8,7 @@ import QualityLanding from '../components/LandingComponents/QualityLanding'
 import ServiceDetail from '../components/LandingComponents/ServiceDetail'
 
 const ServiceDetailPage = () => {
+  const navigate = useNavigate()
 
   const { service } = useParams()
 
@@ -214,10 +215,18 @@ const ServiceDetailPage = () => {
     ],
     diet : [] ,
   }
+
+  useEffect(() => {
+    const serviceParams = ["custom","digital","cx","iot","cyber","it","enterprise","diet"]
+    if(!serviceParams.includes(service)) {
+      navigate("/notfound")
+    }
+  }, [])
+
+  
   return (
     <div>
       <div className={`${bgImage[service]}  object-scale-down h-[450px] bg-auto bg-no-repeat px-14`}>
-        {/* {{service}} */}
         <Header />
         <ServiceLanding firstHeader={headerContent[service]} secondHeader={subHeaderContent[service]}/>
       </div>

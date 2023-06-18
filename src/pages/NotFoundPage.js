@@ -1,10 +1,15 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import Header from './layout/Header'
 import Footer from './layout/Footer'
 import './NotFoundPage.css'
 
 const NotFoundPage = () => {
+  const navigate = useNavigate()
+  useEffect(() => {
+    navigate("/notfound")
+  }, [])
+  
   return (
     <div>
       <div className={`bg-not-found-image object-scale-down h-[450px] bg-auto bg-no-repeat px-14`}>
