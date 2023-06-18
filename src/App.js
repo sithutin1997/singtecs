@@ -5,6 +5,7 @@ import AboutUsPage from './pages/AboutUsPage';
 import GetInTouch from './pages/GetInTouch';
 import OurServices from './pages/OurServicesPage';
 import ServiceDetailPage from './pages/ServiceDetailPage';
+import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path='/getintouch' element={<GetInTouch />} />
         <Route path='/ourservices' element={<OurServices />} />
         <Route path='/ourservices/:service' element={<ServiceDetailPage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>
   );
