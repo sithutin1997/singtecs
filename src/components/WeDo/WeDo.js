@@ -4,21 +4,26 @@ import iot from '../../assets/iot.png'
 import cx from '../../assets/cx.png'
 import digital from '../../assets/digital.png'
 import {motion} from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 const WeDo = () => {
 
   const cardVariants = {
     offscreen: {
-      x: 1000,
+      x: 50,
+      opacity: 0,
+      rotateY: 50
     },
     onscreen: {
       opacity: 1,
       x: 0,
+      rotateY: 0,
       transition: {
         type: "spring",
         bounce: 0,
-        duration: 1
+        duration: 3
       }
+      
     }
   };
 
@@ -27,7 +32,7 @@ const WeDo = () => {
     initial="offscreen"
     whileInView="onscreen"
     viewport={{ once: false, amount: 0.2 }}
-    animate={{ x: 0 }}
+    animate={{ x: 0, rotateX: 0 }}
     className='flex flex-col mx-24 py-14'>
       <h1 className='text-4xl font-poppin-light font-bold text-left mb-14'>What we do</h1>
       <div className='flex flex-row space-x-7 mb-24'>
@@ -53,7 +58,7 @@ const WeDo = () => {
         </motion.div>
       </div>
       <div className='text-center'>
-        <button className='bg-transparent text-black py-2 px-4 border border-black rounded w-[12rem] font-poppin-bold'>View All Services</button>
+        <button className='bg-transparent text-black py-2 px-4 border border-black rounded w-[12rem] font-poppin-bold'><Link to="/ourservices">View All Services</Link></button>
       </div>
     </motion.div>
   )

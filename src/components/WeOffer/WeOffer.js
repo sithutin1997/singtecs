@@ -15,15 +15,15 @@ const WeOffer = () => {
 
     const cardVariants = {
       offscreen: {
-        x: 1000,
+        rotateX: 150,
       },
       onscreen: {
-        opacity: 1,
         x: 0,
+        rotateX: 0,
         transition: {
           type: "spring",
           bounce: 0,
-          duration: 1
+          duration: 2
         }
       }
     };

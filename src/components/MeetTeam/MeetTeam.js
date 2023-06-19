@@ -1,6 +1,6 @@
-import React from 'react'
+import React,{useEffect, useRef} from 'react'
 import meetteam from '../../assets/meetteamhalfcircle.svg'
-import {motion} from 'framer-motion'
+import {motion,animate} from 'framer-motion'
   
 
 const MeetTeam = () => {
@@ -21,6 +21,35 @@ const MeetTeam = () => {
     }
   };
 
+  const itRef = useRef();
+  const expRef = useRef();
+  const clientRef = useRef();
+  useEffect(() => {
+    animate(0, 24, {
+      duration: 2,
+      speed: 2,
+      onUpdate(value) {
+        itRef.current.textContent = value.toFixed(0);
+      }
+    })
+    animate(0, 24, {
+      duration: 2,
+      speed: 2,
+      onUpdate(value) {
+        expRef.current.textContent = value.toFixed(0);
+      }
+    })
+    animate(0, 100, {
+      duration: 1,
+      speed: 2,
+      onUpdate(value) {
+        clientRef.current.textContent = value.toFixed(0);
+      }
+    })
+  }, [])
+  
+  
+
   return (
     <div className='flex justify-end mt-16'>
         <div className="relative"> 
@@ -31,8 +60,8 @@ const MeetTeam = () => {
               variants={cardVariants}
               initial="offscreen"
               whileInView="onscreen"
-              animate={{ opacity: 1 }}
-              className="text-8xl">24</motion.p>
+              className="text-8xl"
+              ref={itRef}></motion.p>
               
               <motion.p  viewport={{ once: false, amount: 0.2 }} 
               variants={cardVariants}
@@ -47,7 +76,8 @@ const MeetTeam = () => {
               initial="offscreen"
               whileInView="onscreen"
               animate={{ opacity: 1 }}
-              className="text-8xl">28</motion.p>
+              className="text-8xl"
+              ref={expRef}></motion.p>
 
               <motion.p  viewport={{ once: false, amount: 0.2 }} 
               variants={cardVariants}
@@ -62,7 +92,8 @@ const MeetTeam = () => {
               initial="offscreen"
               whileInView="onscreen"
               animate={{ opacity: 1 }}
-              className="text-8xl">2000</motion.p>
+              className="text-8xl"
+              ref={clientRef}></motion.p>
               
               <motion.p  viewport={{ once: false, amount: 0.2 }} 
               variants={cardVariants}
