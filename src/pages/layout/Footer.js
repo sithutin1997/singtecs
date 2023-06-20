@@ -2,6 +2,7 @@ import React from 'react'
 import fb from '../../assets/foot-fb.svg'
 import whatsapp from '../../assets/foot-what.svg'
 import linkedin from '../../assets/foot-linkedin.svg'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -10,16 +11,16 @@ const Footer = () => {
         <h1 className=' font-thin-bold text-left font-bold'>Our Services</h1>
         <div className='flex flex-row space-x-4'>
           <div className='flex flex-col text-left'>
-            <span className='font-poppin-thin font-thin'>Custom Web & Mobile Development</span>
-            <span className='font-poppin-thin font-thin'>Digital Transformation</span>
-            <span className='font-poppin-thin font-thin'>CX/UX Engineering</span>
-            <span className='font-poppin-thin font-thin'>CX/UX IoT and Cloud Computing</span>
+            <span className='font-poppin-thin font-thin'><Link to={"/ourservices/custom"}>Custom Web & Mobile Development</Link></span>
+            <span className='font-poppin-thin font-thin'><Link to={"/ourservices/digital"}>Digital Transformation</Link></span>
+            <span className='font-poppin-thin font-thin'><Link to={"/ourservices/cx"}>CX/UX Engineering</Link></span>
+            <span className='font-poppin-thin font-thin'><Link to={"/ourservices/iot"}>IoT and Cloud Computing</Link></span>
           </div>
           <div className='flex flex-col text-left'>
-            <span className='font-poppin-thin font-thin'>Cyber Security</span>
-            <span className='font-poppin-thin font-thin'>IT Consultancy</span>
-            <span className='font-poppin-thin font-thin'>Enterprise Service</span>
-            <span className='font-poppin-thin font-thin'>Online Diet Consultant</span>
+            <span className='font-poppin-thin font-thin'><Link to={"/ourservices/cyber"}>Cyber Security</Link></span>
+            <span className='font-poppin-thin font-thin'><Link to={"/ourservices/it"}>IT Consultancy</Link></span>
+            <span className='font-poppin-thin font-thin'><Link to={"/ourservices/enterprise"}>Enterprise Service</Link></span>
+            <span className='font-poppin-thin font-thin'><Link to={"/ourservices/diet"}>Online Diet Consultant</Link></span>
           </div>
         </div>
       </div>
