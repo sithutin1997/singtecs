@@ -32,6 +32,7 @@ const MeetTeam = () => {
         itRef.current.textContent = value.toFixed(0);
       }
     })
+    
     animate(0, 24, {
       duration: 2,
       speed: 2,
@@ -39,6 +40,7 @@ const MeetTeam = () => {
         expRef.current.textContent = value.toFixed(0);
       }
     })
+
     animate(0, 100, {
       duration: 1,
       speed: 2,

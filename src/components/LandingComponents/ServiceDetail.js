@@ -59,7 +59,7 @@ const ServiceDetail = ({header, rightBody = []}) => {
                       <ul className='list-disc'>
                         {
                           right.body.map((element,index) => {
-                          return <li key={index} className='font-poppin-thin font-sm'>{element}</li>
+                          return <li key={index} className='font-poppin-thin font-thin font-sm'>{element}</li>
                         })
                         }
                       </ul>
@@ -77,7 +77,7 @@ const ServiceDetail = ({header, rightBody = []}) => {
                   <h3 className='font-poppin-bold text-lg'>{right.header}</h3>
                   {
                     right.body.map((element,index) => {
-                     return <p key={index} className='font-poppin-thin font-sm'>{element}</p>
+                     return <p key={index} className='font-poppin-thin font-thin font-sm'>{element}</p>
                     })
                   }
                 </div>
