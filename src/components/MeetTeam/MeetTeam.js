@@ -53,16 +53,16 @@ const MeetTeam = () => {
   
 
   return (
-    <div className='flex justify-end mt-16'>
+    <div className='flex justify-end my-16 ms-16'>
         <div className="relative"> 
-           <img src={meetteam} alt="" className="w-full h-full object-cover"/> 
+           <img src={meetteam} alt="" className="xl:w-full xl:h-full object-cover z-0"/> 
            <div className="absolute flex top-0 left-0 w-full h-full font-poppin-thin font-bold text-white text-center items-center justify-evenly ">
             <div>
             <motion.p  viewport={{ once: false, amount: 0.2 }} 
               variants={cardVariants}
               initial="offscreen"
               whileInView="onscreen"
-              className="text-8xl"
+              className="xl:text-8xl text-5xl"
               ref={itRef}></motion.p>
               
               <motion.p  viewport={{ once: false, amount: 0.2 }} 
@@ -70,7 +70,7 @@ const MeetTeam = () => {
               initial="offscreen"
               whileInView="onscreen"
               animate={{ opacity: 1 }}
-              className="text-2xl">IT Experts</motion.p>
+              className="xl:text-2xl text-lg">IT Experts</motion.p>
             </div>
             <div>
             <motion.p  viewport={{ once: false, amount: 0.2 }} 
@@ -78,7 +78,7 @@ const MeetTeam = () => {
               initial="offscreen"
               whileInView="onscreen"
               animate={{ opacity: 1 }}
-              className="text-8xl"
+              className="xl:text-8xl text-5xl"
               ref={expRef}></motion.p>
 
               <motion.p  viewport={{ once: false, amount: 0.2 }} 
@@ -86,7 +86,7 @@ const MeetTeam = () => {
               initial="offscreen"
               whileInView="onscreen"
               animate={{ opacity: 1 }}
-              className="text-2xl">Years Of Experience</motion.p>
+              className="xl:text-2xl text-lg">Years Of Experience</motion.p>
             </div>
             <div>
             <motion.p  viewport={{ once: false, amount: 0.2 }} 
@@ -94,7 +94,7 @@ const MeetTeam = () => {
               initial="offscreen"
               whileInView="onscreen"
               animate={{ opacity: 1 }}
-              className="text-8xl"
+              className="xl:text-8xl text-5xl"
               ref={clientRef}></motion.p>
               
               <motion.p  viewport={{ once: false, amount: 0.2 }} 
@@ -102,7 +102,7 @@ const MeetTeam = () => {
               initial="offscreen"
               whileInView="onscreen"
               animate={{ opacity: 1 }}
-              className="text-2xl">Satisfied Clients</motion.p>
+              className="xl:text-2xl text-lg">Satisfied Clients</motion.p>
             </div>
           </div>
         </div> 

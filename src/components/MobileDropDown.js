@@ -38,7 +38,7 @@ const MobileDropDown = ({showMenu,setOnClick}) => {
     animate= {showMenu ? 'open' : 'closed'}
     initial={false}
     variants={cardVariants}
-    className={showMenu == true ? `absolute top-0 left-0 w-full bg-white h-full border-solid border-b border-b-black` : `hidden`}>
+    className={showMenu == true ? `z-10 absolute top-0 left-0 w-full bg-white h-full border-solid border-b border-b-black` : `hidden`}>
       <img src={close} alt="" className='absolute top-6 right-6 cursor-pointer' onClick={()=> handleOnClick(false)}/>
       <ul className='p-16 space-y-16'>
         <li className='text-2xl font-poppin'><Link to={"/about"}>About Us</Link></li>
