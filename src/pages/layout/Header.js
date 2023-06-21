@@ -7,11 +7,14 @@ import whatsapp from '../../assets/whatsapp.svg'
 import DropDownMenu from '../../components/DropDownMenu'
 import { useState,useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import burger from  '../../assets/burger-menu.svg'
+import MobileDropDown from '../../components/MobileDropDown'
 
 const Header = ({setShow}) => {
   
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
   const [isMenu, setIsMenu] = useState(false);
+  const [isMobileMenu, setIsMobileMenu] = useState(false)
 
   useEffect(() => {
     handleMouseEnter(isMenu)
@@ -21,15 +24,21 @@ const Header = ({setShow}) => {
     setIsDropdownVisible(value)
   }
 
-
+  useEffect(() => {
+    handleOnClick(isMobileMenu)
+  }, [isMobileMenu])
+  
+  const handleOnClick = (value) => {
+    setIsMobileMenu(value)
+  }
   return (
-      <div className='flex flex-row items-center border-solid border-b border-b-white py-5'>
-        <div className='text-left w-1/2'>
+      <div className="bg-no-repeat flex flex-row xl:items-center justify-between border-solid border-b border-b-white py-5 xl:h-auto">
+        <div className='text-left w-1/3'>
           <Link to={"/"}>
             <img src={logo} alt="logo" className='object-scale-down' width={200}/>
           </Link>
         </div>
-        <div className='w-1/2'>
+        <div className='xl:inline hidden w-1/2'>
           <div className="flex flex-row justify-center gap-x-10 ">
             <Link to={"/about"} className='text-white font-poppin-book cursor-pointer'>About Us</Link>
 
@@ -37,11 +46,15 @@ const Header = ({setShow}) => {
             <DropDownMenu show={isDropdownVisible}/>
 
             <Link to={"/getintouch"} className='text-white font-poppin-book cursor-pointer'>Get a free quote</Link>
-            <img src={facebook} alt="" className='object-scale-down'/>
-            <img src={whatsapp} alt="" className='object-scale-down'/>
-            <img src={linkedin} alt="" className='object-scale-down'/>
+            <img src={facebook} alt="" className='xl:object-scale-down xl:inline hidden'/>
+            <img src={whatsapp} alt="" className='xl:object-scale-down xl:inline hidden'/>
+            <img src={linkedin} alt="" className='xl:object-scale-down xl:inline hidden'/>
           </div>
         </div>
+        <div className='xl:hidden'>
+          <img src={burger} alt="" className='object-scale-down cursor-pointer' onClick={()=> handleOnClick(!isMobileMenu)}/>
+        </div>
+        <MobileDropDown showMenu={isMobileMenu} setOnClick={handleOnClick}/>
       </div>
   )
 }

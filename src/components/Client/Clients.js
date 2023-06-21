@@ -9,23 +9,38 @@ import alpsoft from '../../assets/alpsoft.svg'
 
 const Clients = () => {
   return (
-    <div className='bg-world-image bg-auto bg-right-top bg-no-repeat shadow-md mx-24'>
+    <div className='bg-world-image bg-auto bg-right-top bg-no-repeat shadow-md xl:mx-24'>
       <div className='flex flex-col p-14 space-y-16'>
-        <h1 className='text-4xl font-poppin font-bold w-2/3 text-left'>Our reputation is built on creating great outcomes for our clients</h1>
+        <h1 className='text-4xl font-poppin font-bold xl:w-2/3 w-full text-left'>Our reputation is built on creating great outcomes for our clients</h1>
         <div className='flex flex-col space-y-10'>
-          <div className='flex flex-row space-x-28'>
-            <img src={auth} alt="" />
-            <img src={nec} alt="" />
-            <img src={raptor} alt="" />
-            <img src={auth} alt="" />
-            <img src={nec} alt="" />
+          <div className='flex flex-col space-y-10 xl:space-y-0 xl:flex-row xl:space-x-28 px-16'>
+            <div className='flex flex-row space-x-16'>
+              <img src={auth} alt="" />
+              <img src={nec} alt="" />
+            </div>
+            <div className='flex flex-row space-x-16'>
+              <img src={raptor} alt="" />
+              <img src={auth} alt="" />
+            </div>
+            <div className='flex flex-row space-x-16'>
+              <img src={nec} alt="" />
+            </div>
           </div>
-          <div className='flex flex-row space-x-16'>
-            <img src={alpsoft} alt="" />
-            <img src={mandai} alt="" />
-            <img src={audi} alt="" />
-            <img src={alpsoft} alt="" />
-            <img src={mandai} alt="" />
+          <div className='flex flex-col space-y-10 xl:flex-row xl:space-x-28 px-16'>
+            <div className='flex flex-row space-x-16'>
+              <img src={alpsoft} alt="" />
+              <img src={mandai} alt="" />
+            </div>
+            <div className='flex flex-row space-x-16'>
+              <img src={audi} alt="" />
+              <img src={alpsoft} alt="" />
+            </div>
+            <div className='flex flex-row space-x-16'>
+
+              <img src={mandai} alt="" />
+            </div>
+            
+            
           </div>
         </div>
       </div>

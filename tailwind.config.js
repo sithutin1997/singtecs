@@ -15,7 +15,8 @@ module.exports = {
       'poppin-light': ['"poppins"', 'sans-serif'],
       'poppin-book': ['"poppins"', 'sans-serif']
     },
-    extend: {},
+    extend: {
+    },
   },
   plugins: [],
 }

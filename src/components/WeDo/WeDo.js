@@ -35,23 +35,23 @@ const WeDo = () => {
     animate={{ x: 0, rotateX: 0 }}
     className='flex flex-col mx-24 py-14'>
       <h1 className='text-4xl font-poppin-light font-bold text-left mb-14'>What we do</h1>
-      <div className='flex flex-row space-x-7 mb-24'>
-        <motion.div variants={cardVariants} className='flex flex-col space-y-1'>
+      <div className='flex xl:flex-row flex-col xl:space-x-7 space-y-10 xl:space-y-0 mb-16 xl:mb-24'>
+        <motion.div variants={cardVariants} className='flex flex-col space-y-2 xl:space-y-1'>
           <img src={custom} alt="" />
           <p className='font-poppin-bold text-left'>Custom Web & </p>
           <p className='font-poppin-bold text-left'>Mobile Development</p>
         </motion.div>
-        <motion.div variants={cardVariants} className='flex flex-col space-y-1'>
+        <motion.div variants={cardVariants} className='flex flex-col space-y-2 xl:space-y-1'>
           <img src={digital} alt="" />
           <p className='font-poppin-bold text-left'>Digital</p>
           <p className='font-poppin-bold text-left'>Transformation</p>
         </motion.div>
-        <motion.div variants={cardVariants} className='flex flex-col space-y-1'>
+        <motion.div variants={cardVariants} className='flex flex-col space-y-2 xl:space-y-1'>
           <img src={cx} alt="" />
           <p className='font-poppin-bold text-left'>CX/UX </p>
           <p className='font-poppin-bold text-left'>Engineering</p>
         </motion.div>
-        <motion.div variants={cardVariants} className='flex flex-col space-y-1'>
+        <motion.div variants={cardVariants} className='flex flex-col space-y-2 xl:space-y-1'>
           <img src={iot} alt="" />
           <p className='font-poppin-bold text-left'>IoT and Cloud</p>
           <p className='font-poppin-bold text-left'>Computing</p>
