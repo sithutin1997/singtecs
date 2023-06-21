@@ -13,7 +13,7 @@ const Clients = () => {
       <div className='flex flex-col p-14 space-y-16'>
         <h1 className='text-4xl font-poppin font-bold xl:w-2/3 w-full text-left'>Our reputation is built on creating great outcomes for our clients</h1>
         <div className='flex flex-col space-y-10'>
-          <div className='flex flex-col space-y-10 xl:space-y-0 xl:flex-row xl:space-x-28 px-16'>
+          <div className='flex flex-col space-y-10 lg:flex-row lg:space-y-0 md:justify-between xl:space-y-0 xl:flex-row xl:space-x-28 px-16'>
             <div className='flex flex-row space-x-16'>
               <img src={auth} alt="" />
               <img src={nec} alt="" />
@@ -26,7 +26,7 @@ const Clients = () => {
               <img src={nec} alt="" />
             </div>
           </div>
-          <div className='flex flex-col space-y-10 xl:flex-row xl:space-x-28 px-16'>
+          <div className='flex flex-col space-y-10 lg:flex-row xl:space-x-28 px-16'>
             <div className='flex flex-row space-x-16'>
               <img src={alpsoft} alt="" />
               <img src={mandai} alt="" />

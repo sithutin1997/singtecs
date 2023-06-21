@@ -17,7 +17,7 @@ const FrontPage = () => {
   const [bg,setBg] = useState(false)
   return (
   <div>
-    <div className={`bg-hero-image bg-auto bg-right bg-no-repeat h-[640px] px-14`}>
+    <div className={`bg-hero-image bg-cover xl:bg-auto bg-right bg-no-repeat h-[640px] px-14`}>
       <Header setShow={backgroundBlur} />
       <Landing showClass={bg ? `blur-sm bg-white/30` : ``}/>
     </div>

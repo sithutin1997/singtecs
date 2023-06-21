@@ -3,7 +3,7 @@ import welove from '../../assets/welove.png'
 const WeLove = () => {
   return (
     <div className='flex flex-col flex-col-reverse xl:flex-row mx-24 mb-24 bg-slate-100'>
-      <div className='flex flex-col py-14 xl:ps-14 px-6'>
+      <div className='flex flex-col py-14 w-full xl:ps-14 px-6'>
         <h1 className='font-poppin-book text-2xl xl:text-5xl w-full xl:w-2/3 text-left mb-14'>We would love to be your digital partner.</h1>
         <div className='flex flex-col space-y-4 w-full xl:w-1/2'>
           <input type="text" className='block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300' placeholder='Name'/>
@@ -13,8 +13,8 @@ const WeLove = () => {
           <button className='bg-transparent text-black py-2 px-4 border border-black rounded w-[12rem] font-poppin-bold'>Submit</button>
         </div>
       </div>
-      <div>
-        <img src={welove} alt="" />
+      <div className='md:hidden xl:flex w-full h-1/3'>
+        <img src={welove} className="w-full h-1/2 xl:h-full"alt="" />
       </div>
     </div>
   )

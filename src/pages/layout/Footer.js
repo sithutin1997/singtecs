@@ -7,10 +7,10 @@ import { Link } from 'react-router-dom'
 const Footer = () => {
   return (
     <div className='border border-gray-300 border-t'>
-      <div className=' flex flex-col xl:flex-row mx-24 mt-20 mb-36  space-y-16 xl:space-y-0 xl:space-x-36'>
+      <div className=' flex flex-col lg:flex-row mx-24 mt-20 mb-36  space-y-16 lg:space-y-0 lg:space-x-36'>
         <div className='flex flex-col space-y-4'>
           <h1 className=' font-thin-bold text-left font-bold'>Our Services</h1>
-          <div className='flex xl:flex-row flex-col space-y-4 xl:space-y-0 xl:space-x-4'>
+          <div className='flex lg:flex-row flex-col space-y-4 lg:space-y-0 lg:space-x-4'>
             <div className='flex flex-col text-left'>
               <span className='font-poppin-thin font-thin'><Link to={"/ourservices/custom"}>Custom Web & Mobile Development</Link></span>
               <span className='font-poppin-thin font-thin'><Link to={"/ourservices/digital"}>Digital Transformation</Link></span>
