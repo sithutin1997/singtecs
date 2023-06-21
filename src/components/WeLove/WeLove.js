@@ -9,7 +9,7 @@ const WeLove = () => {
           <input type="text" className='block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300' placeholder='Name'/>
           <input type="text" className='block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300' placeholder='Email'/>
           <input type="text" className='block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300' placeholder='Subject'/>
-          <textarea type="text-area" className='block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300' placeholder='Type your message here'> </textarea>
+          <textarea type="text-area" className='block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300' defaultValue={`Text your message here`}></textarea>
           <button className='bg-transparent text-black py-2 px-4 border border-black rounded w-[12rem] font-poppin-bold'>Submit</button>
         </div>
       </div>
