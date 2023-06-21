@@ -13,7 +13,7 @@ const ServiceDetail = ({header, rightBody = []}) => {
   const { service } = useParams()
   return (
     <div className='flex flex-col flex-y-10 p-12'>
-      <h1 className={header ? `font-poppin-book text-3xl xl:text-5xl` : 'hidden'}>{ header ? header : `Diet`}</h1>
+      <h1 className={header ? `font-poppin-book text-3xl xl:text-5xl mb-6` : 'hidden'}>{ header ? header : `Diet`}</h1>
       <div className='flex xl:flex-row flex-col space-y-12 xl:space-y-0 xl:space-x-12'>
       
         {/* 
@@ -53,10 +53,10 @@ const ServiceDetail = ({header, rightBody = []}) => {
             rightBody.map((right,index) => {
               if(right.body.length > 5) {
                 return (
-                  <div key={index}>
-                      <h2 className='font-poppin-bold text-cyan-500 text-xl xl:text-3xl'>{right.listNumber}</h2>
+                  <div key={index} className='mb-6'>
+                      <h2 className='font-poppin-bold text-cyan-500 mb-4 text-xl xl:text-3xl'>{right.listNumber}</h2>
                       <h3 className='font-poppin-bold text-lg'>{right.header}</h3>
-                      <ul className='list-disc'>
+                      <ul className='list-disc px-6'>
                         {
                           right.body.map((element,index) => {
                           return <li key={index} className='font-poppin-thin font-thin font-sm'>{element}</li>
@@ -72,8 +72,8 @@ const ServiceDetail = ({header, rightBody = []}) => {
               }
               return (
                 
-                <div key={index}>
-                  <h2 className='font-poppin-bold text-cyan-500 text-xl xl:text-3xl'>{right.listNumber}</h2>
+                <div key={index} className='mb-6'>
+                  <h2 className='font-poppin-bold mb-4 text-cyan-500 text-xl xl:text-3xl'>{right.listNumber}</h2>
                   <h3 className='font-poppin-bold text-lg'>{right.header}</h3>
                   {
                     right.body.map((element,index) => {

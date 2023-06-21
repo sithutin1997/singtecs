@@ -44,7 +44,7 @@ const Landing = ({showClass}) => {
       initial="offscreen"
       whileInView="onscreen"
       animate={{ opacity: 1 }}
-      className='text-left w-2/3 font-light text-white xl:text-black font-poppin font-thin'>Welcome to Singtechnologies, where we believe that true success comes from empowering our clients with the right expertise and knowledge. We are not just a tech consultancy; we are your partners in growth, providing you with the tools and guidance you need to succeed in the long term.</motion.p>
+      className='text-left  w-full xl:w-2/3 font-light text-white xl:text-black font-poppin font-thin'>Welcome to Singtechnologies, where we believe that true success comes from empowering our clients with the right expertise and knowledge. We are not just a tech consultancy; we are your partners in growth, providing you with the tools and guidance you need to succeed in the long term.</motion.p>
 
       <motion.button  viewport={{ once: false, amount: 0.2 }}
       variants={cardVariants}
