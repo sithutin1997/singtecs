@@ -1,11 +1,14 @@
 import React,{useState,useRef} from 'react'
 import welove from '../../assets/welove.png'
 import emailjs from '@emailjs/browser';
+import ReCAPTCHA from 'react-google-recaptcha';
+
 
 
 const WeLove = () => {
 
   const formRef = useRef();
+  const captchaRef = useRef();
   const [formData, setFormData] = useState({
     user_name: "",
     user_email: "",
@@ -22,6 +25,8 @@ const WeLove = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
+    const token = captchaRef.current.getValue();
+    captchaRef.current.reset();
     emailjs.sendForm('service_up3u84z', 'template_b0eynp4', formRef.current, 'p1HpbCMU3P8X8hVR0')
       .then((result) => {
           console.log(result.text);
@@ -58,6 +63,7 @@ const WeLove = () => {
           <input name="user_email" type="text" className='block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300' placeholder='Email'/>
           <input name="subject"type="text" className='block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300' placeholder='Subject'/>
           <textarea name="message" type="text-area" className='block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300'></textarea>
+          <ReCAPTCHA sitekey="6LdwUdMmAAAAAAhPaT0xYypLuiumIGkE9Hwae55V" ref={captchaRef}/>
           <button className='bg-transparent text-black py-2 px-4 border border-black rounded w-[12rem] font-poppin-bold'>Submit</button>
         </form>
       </div>
