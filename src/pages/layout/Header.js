@@ -6,7 +6,7 @@ import facebook from '../../assets/facebook.svg'
 import whatsapp from '../../assets/whatsapp.svg'
 import DropDownMenu from '../../components/DropDownMenu'
 import { useState,useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import burger from  '../../assets/burger-menu.svg'
 import MobileDropDown from '../../components/MobileDropDown'
 
@@ -38,14 +38,14 @@ const Header = ({setShow}) => {
             <img src={logo} alt="logo" className='object-scale-down' width={200}/>
           </Link>
         </div>
-        <div className='xl:inline hidden w-1/2'>
-          <div className="flex flex-row justify-center gap-x-10 ">
-            <Link to={"/about"} className='text-white font-poppin-book cursor-pointer'>About Us</Link>
+        <div className='xl:inline hidden w-2/4'>
+          <div className="flex flex-row justify-end lg:pe-14 gap-x-10 ">
+            <NavLink to={"/about"} className={({ isActive }) => (isActive ? "font-poppin-book cursor-pointer text-blue-500" : "text-white font-poppin-book cursor-pointer")}>About Us</NavLink>
 
-            <Link to={"/ourservices"} className='relative text-white font-poppin-book cursor-pointer' onMouseEnter={()=>handleMouseEnter(true)} onMouseLeave={()=>handleMouseEnter(false)}>Our Services</Link>
+            <NavLink to={"/ourservices"} className={({ isActive }) => (isActive ? "relative font-poppin-book cursor-pointer text-blue-500" : "relative text-white font-poppin-book cursor-pointer")} onMouseEnter={()=>handleMouseEnter(true)} onMouseLeave={()=>handleMouseEnter(false)}>Our Services</NavLink>
             <DropDownMenu show={isDropdownVisible}/>
 
-            <Link to={"/getintouch"} className='text-white font-poppin-book cursor-pointer'>Get a free quote</Link>
+            <NavLink to={"/getintouch"} className={({ isActive }) => (isActive ? "font-poppin-book cursor-pointer text-blue-500" : "text-white font-poppin-book cursor-pointer")}>Get a free quote</NavLink>
             <img src={facebook} alt="" className='xl:object-scale-down xl:inline hidden'/>
             <img src={whatsapp} alt="" className='xl:object-scale-down xl:inline hidden'/>
             <img src={linkedin} alt="" className='xl:object-scale-down xl:inline hidden'/>

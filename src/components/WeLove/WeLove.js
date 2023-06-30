@@ -2,6 +2,7 @@ import React,{useState,useRef} from 'react'
 import welove from '../../assets/welove.png'
 import emailjs from '@emailjs/browser';
 import ReCAPTCHA from 'react-google-recaptcha';
+import './WeLove.css'
 
 
 
@@ -55,7 +56,7 @@ const WeLove = () => {
   }
 
   return (
-    <div className='flex flex-col flex-col-reverse xl:flex-row m-24 bg-slate-100'>
+    <div className='flex flex-col flex-col-reverse xl:flex-row m-10 lg:m-24 bg-slate-100'>
       <div className='flex flex-col py-14 w-full xl:ps-14 px-6'>
         <h1 className='font-poppin-book text-2xl xl:text-5xl w-full xl:w-2/3 text-left mb-14'>We would love to be your digital partner.</h1>
         <form onSubmit={handleSubmit} ref={formRef} className='flex flex-col space-y-4 w-full xl:w-1/2'>
@@ -63,7 +64,10 @@ const WeLove = () => {
           <input name="user_email" type="text" className='block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300' placeholder='Email'/>
           <input name="subject"type="text" className='block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300' placeholder='Subject'/>
           <textarea name="message" type="text-area" className='block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300'></textarea>
+          <div className='w-1/2'>
+
           <ReCAPTCHA sitekey="6LdwUdMmAAAAAAhPaT0xYypLuiumIGkE9Hwae55V" ref={captchaRef}/>
+          </div>
           <button className='bg-transparent text-black py-2 px-4 border border-black rounded w-[12rem] font-poppin-bold'>Submit</button>
         </form>
       </div>

@@ -1,5 +1,6 @@
 .bg-about-image {
-  background-image: url('../assets/aboutus.png')
+  background-image: url('../assets/aboutus.png');
+  background-size: 100vw 50%;
 }
 
 /* .bg-meet-image {
