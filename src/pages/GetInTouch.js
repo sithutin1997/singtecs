@@ -6,6 +6,9 @@ import Landing from '../components/GetInTouch/Landing'
 import WeLove from '../components/WeLove/WeLove'
 
 const GetInTouch = () => {
+  const dataProps = {
+    weLove: "We Love"
+  }
   const [show,setShow] = useState(false)
   const backgroundBlur = (show) => {
     setShow(show)
@@ -19,7 +22,7 @@ const GetInTouch = () => {
         <Landing />
         
       </div>
-      <WeLove />
+      <WeLove data={dataProps}/>
       <Footer />
     </div>
   )

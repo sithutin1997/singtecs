@@ -7,11 +7,11 @@ import raptor from '../../assets/raptor.svg'
 import mandai from '../../assets/mandai.svg'
 import alpsoft from '../../assets/alpsoft.svg'
 
-const Clients = () => {
+const Clients = ({data}) => {
   return (
     <div className='bg-world-image bg-auto bg-right-top bg-no-repeat shadow-md xl:mx-24'>
       <div className='flex flex-col p-14 space-y-16'>
-        <h1 className='xl:text-4xl text-2xl font-poppin font-bold xl:w-2/3 w-full text-left'>Our reputation is built on creating great outcomes for our clients</h1>
+        <h1 className='xl:text-4xl text-2xl font-poppin font-bold xl:w-2/3 w-full text-left'>{data.clientsHeader}</h1>
         <div className='flex flex-col space-y-10'>
           <div className='flex flex-col space-y-10 lg:flex-row lg:space-y-0 md:justify-between xl:space-y-0 xl:flex-row xl:space-x-28 xl:px-16'>
             <div className='flex flex-col md:flex-row space-y-10 md:space-y-0 md:space-x-16'>

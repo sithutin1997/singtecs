@@ -1,7 +1,7 @@
 import React,{useEffect,useState} from 'react'
 import {motion} from 'framer-motion'
 
-const Landing = ({showClass}) => {
+const Landing = ({data,showClass}) => {
 
   const cardVariants = {
     offscreen: {
@@ -37,14 +37,14 @@ const Landing = ({showClass}) => {
       initial="offscreen"
       whileInView="onscreen"
       animate={{ opacity: 1 }}
-      className='xl:text-7xl text-5xl text-left xl:text-black text-white font-poppin'>We are {allLetters[letterIndex]}</motion.h1>
+      className='xl:text-7xl text-5xl text-left xl:text-black text-white font-poppin'>{data.header} {allLetters[letterIndex]}</motion.h1>
 
       <motion.p  viewport={{ once: false, amount: 0.2 }} 
       variants={cardVariants}
       initial="offscreen"
       whileInView="onscreen"
       animate={{ opacity: 1 }}
-      className='text-left  w-full xl:w-2/3 font-light text-white xl:text-black font-poppin font-thin'>Welcome to Singtechnologies, where we believe that true success comes from empowering our clients with the right expertise and knowledge. We are not just a tech consultancy; we are your partners in growth, providing you with the tools and guidance you need to succeed in the long term.</motion.p>
+      className='text-left  w-full xl:w-2/3 font-light text-white xl:text-black font-poppin font-thin'>{data.body}</motion.p>
 
       <motion.button  viewport={{ once: false, amount: 0.2 }}
       variants={cardVariants}

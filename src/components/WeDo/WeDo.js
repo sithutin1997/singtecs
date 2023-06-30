@@ -6,7 +6,7 @@ import digital from '../../assets/digital.png'
 import {motion} from 'framer-motion'
 import { Link } from 'react-router-dom'
 
-const WeDo = () => {
+const WeDo = ({data}) => {
 
   const cardVariants = {
     offscreen: {
@@ -34,7 +34,7 @@ const WeDo = () => {
     viewport={{ once: false, amount: 0.2 }}
     animate={{ x: 0, rotateX: 0 }}
     className='flex flex-col mx-24 py-14'>
-      <h1 className='text-4xl font-poppin-light font-bold text-left mb-14'>What we do</h1>
+      <h1 className='text-4xl font-poppin-light font-bold text-left mb-14'>{data.weDo}</h1>
       <div className='flex md:flex-row flex-col md:space-x-7 space-y-10 md:space-y-0 mb-16 md:mb-24'>
         <motion.div variants={cardVariants} className='flex flex-col space-y-2 md:space-y-1'>
           <img src={custom} alt="" />
