@@ -64,9 +64,19 @@ const WeLove = () => {
           <input name="user_email" type="text" className='block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300' placeholder='Email'/>
           <input name="subject"type="text" className='block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300' placeholder='Subject'/>
           <textarea name="message" type="text-area" className='block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300'></textarea>
+          <label for="services">Choose a service:</label>
+          <select name="service" className='block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300'>
+            <option value="Custom Web & Mobile Development">Custom Web & Mobile Development</option>
+            <option value="Digital Transformation">Digital Transformation</option>
+            <option value="CX/UX Engineering">CX/UX Engineering</option>
+            <option value="IoT and Cloud Computing">IoT and Cloud Computing</option>
+            <option value="Cyber Security">Cyber Security</option>
+            <option value="IT Consultancy">IT Consultancy</option>
+            <option value="Enterprise Service">Enterprise Service</option>
+            <option value="Online Diet Consultant">Online Diet Consultant</option>
+          </select> 
           <div className='w-1/2'>
-
-          <ReCAPTCHA sitekey="6LdwUdMmAAAAAAhPaT0xYypLuiumIGkE9Hwae55V" ref={captchaRef}/>
+            <ReCAPTCHA sitekey="6LdwUdMmAAAAAAhPaT0xYypLuiumIGkE9Hwae55V" ref={captchaRef}/>
           </div>
           <button className='bg-transparent text-black py-2 px-4 border border-black rounded w-[12rem] font-poppin-bold'>Submit</button>
         </form>

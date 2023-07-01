@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
-    <div className='border border-gray-300 border-t'>
-      <div className=' flex flex-col lg:flex-row mx-24 mt-20 mb-36  space-y-16 lg:space-y-0 lg:space-x-36'>
+    <div className='border border-gray-300 border-t flex flex-col '>
+      <div className=' flex flex-col lg:flex-row mx-24 mt-20 mb-10  space-y-16 lg:space-y-0 lg:space-x-36'>
         <div className='flex flex-col space-y-4'>
           <h1 className=' font-thin-bold text-left font-bold'>Our Services</h1>
           <div className='flex lg:flex-row flex-col space-y-4 lg:space-y-0 lg:space-x-4'>
@@ -40,6 +40,9 @@ const Footer = () => {
             <img src={whatsapp} alt="" />
           </div>
         </div>
+      </div>
+      <div className='m-10 text-center underline'>
+        <Link to="/privacy">Privacy Policy</Link>
       </div>
     </div>
     
