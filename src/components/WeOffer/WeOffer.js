@@ -11,7 +11,7 @@ import online from '../../assets/OnlineDietConsultant.png'
 import {motion} from 'framer-motion'
 import { Link } from 'react-router-dom'
 
-const WeOffer = () => {
+const WeOffer = ({data}) => {
 
     const cardVariants = {
       offscreen: {
@@ -37,7 +37,7 @@ const WeOffer = () => {
       viewport={{ once: false, amount: 0.2 }}
       animate={{ x: 0 }}
       className='flex flex-col mx-14 py-14'>
-        <h1 className='text-4xl font-poppin-light font-bold text-left mb-14'>What we offer</h1>
+        <h1 className='text-4xl font-poppin-light font-bold text-left mb-14'>{data.weOffer}</h1>
         <div className='flex flex-col space-y-2 xl:items-center'>
             <div className='flex xl:flex-row flex-col space-y-7 xl:space-y-0 xl:space-x-7 mb-10'>
                 <div className='flex flex-col md:flex-row md:justify-between xl:space-x-7 w-full'>

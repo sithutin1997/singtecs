@@ -62,7 +62,7 @@ const WeLove = ({data}) => {
           <input name="user_email" type="text" className='block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300' placeholder='Email'/>
           <input name="subject"type="text" className='block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300' placeholder='Subject'/>
           <textarea name="message" type="text-area" className='block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300'></textarea>
-          <label for="services">Choose a service:</label>
+          <label htmlFor="services">Choose a service:</label>
           <select name="service" className='block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300'>
             <option value="Custom Web & Mobile Development">Custom Web & Mobile Development</option>
             <option value="Digital Transformation">Digital Transformation</option>

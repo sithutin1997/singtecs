@@ -1,24 +1,38 @@
-import React from 'react'
+import React,{useState, useEffect}from 'react'
+import axios from 'axios'
 
 const EnterpriseLeftBody = () => {
+  const [enterpriseLeftData, setEnterpriseLeftData] = useState({})
+
+  useEffect(() => {
+    getEnterpriseLeftData()
+  },[] )
+  
+  const getEnterpriseLeftData = async() => {
+    await axios.get(`${process.env.REACT_APP_BACKEND_URL}/enterprise-left-bodies`, {
+      headers: { 'Authorization': `Bearer ${process.env.REACT_APP_TOKEN}` }
+    }).then(response => response.data.data[0].attributes)
+    .then(data => {setEnterpriseLeftData(data)})
+    .catch(error => console.log(error));
+  }
+
   return (
     <div className='flex flex-col space-y-4'>
       <p className='font-poppin-thin text-sm text-left font-thin'>
-        The name ETM(Enetprise Service Management) may sound new but the concept behind is not. Enterprise service management is applying IT management to other departments in an enterprise to improve efficiency and service delivery.
+        {enterpriseLeftData.body1}
       </p>
       <div className='flex flex-col space-y-2'>
-        <h2 className='font-poppin-bold text-lg text-left'>What Enterprise Service Management Includes?</h2>
-        <p className='font-poppin-thin text-sm text-left font-thin'>It covers most of the daily part of an enterprise including:</p>
+        <h2 className='font-poppin-bold text-lg text-left'>{enterpriseLeftData.header}</h2>
+        <p className='font-poppin-thin text-sm text-left font-thin'>{enterpriseLeftData.body2}</p>
         <ul className='ms-4 list-disc'>
-          <li className='font-poppin-thin text-sm font-thin'>Service Desks</li>
-          <li className='font-poppin-thin text-sm font-thin'>Change and Incident Management Softwares</li>
-          <li className='font-poppin-thin text-sm font-thin'>Self Service(Chatbots, Knowledgebase etc.)</li>
-          <li className='font-poppin-thin text-sm font-thin'>Use of Automation</li>
+          {enterpriseLeftData.enterpriseList?.map((list,index) => {
+            return (<li className='font-poppin-thin text-sm font-thin' key={index}>{list}</li>)
+          })}
         </ul>
       </div>
       <div className='flex flex-col space-y-2'>
-        <h2 className='font-poppin-bold text-lg text-left'>Why Enterprise Service Management Instead of IT Service Management?</h2>
-        <p className='font-poppin-thin text-sm text-left font-thin'>Enterprise Service Management is a concept that implements IT management process in every source that your company have. That is why it adds more value than regular IT management.</p>
+        <h2 className='font-poppin-bold text-lg text-left'>{enterpriseLeftData.header2}</h2>
+        <p className='font-poppin-thin text-sm text-left font-thin'>{enterpriseLeftData.body3}</p>
       </div>
     </div>
   )

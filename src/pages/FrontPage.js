@@ -18,7 +18,7 @@ const FrontPage = () => {
   }, [])
   
   const getLandingData = async() => {
-    await axios.get(process.env.REACT_APP_BACKEND_URL, {
+    await axios.get(`${process.env.REACT_APP_BACKEND_URL}/landing-pages`, {
       headers: { 'Authorization': `Bearer ${process.env.REACT_APP_TOKEN}` }
     }).then(response => response.data.data[0].attributes)
     .then(data => setLandingData(data))

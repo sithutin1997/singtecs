@@ -3,8 +3,7 @@ import meetteam from '../../assets/meetteamhalfcircle.svg'
 import {motion,animate} from 'framer-motion'
   
 
-const MeetTeam = () => {
-
+const MeetTeam = ({data}) => {
   const cardVariants = {
     offscreen: {
       opacity: 0,
@@ -25,7 +24,7 @@ const MeetTeam = () => {
   const expRef = useRef();
   const clientRef = useRef();
   useEffect(() => {
-    animate(0, 24, {
+    animate(0, Number(data.itNumber), {
       duration: 2,
       speed: 2,
       onUpdate(value) {
@@ -33,7 +32,7 @@ const MeetTeam = () => {
       }
     })
     
-    animate(0, 24, {
+    animate(0, Number(data.experience), {
       duration: 2,
       speed: 2,
       onUpdate(value) {
@@ -41,14 +40,14 @@ const MeetTeam = () => {
       }
     })
 
-    animate(0, 100, {
+    animate(0, Number(data.clientCount), {
       duration: 1,
       speed: 2,
       onUpdate(value) {
         clientRef.current.textContent = value.toFixed(0);
       }
     })
-  }, [])
+  }, [data])
   
   
 

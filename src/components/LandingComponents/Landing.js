@@ -3,20 +3,6 @@ import {motion} from 'framer-motion'
 import axios from 'axios'
 
 const Landing = ({data,showClass}) => {
-
-  const [landingData,setLandingData] = useState({})
-  useEffect(() => {
-    getLandingData()
-  }, [])
-  
-  const getLandingData = async() => {
-    await axios.get('http://localhost:1337/api/landing-pages', {
-      headers: { 'Authorization': 'Bearer 99ca2e8d7a4df4cacb396c019d34e5d0c921dd5b9ffe1aecfe57c25bc8dee48e05bf8176a1bd96d3dd8b8493f917daf901c443424e83193de3d40b27cb9b1b511e22f7b8d0d69eb62d9c4a9bf53e704ba3ca6c1781422e235ef9c8293ecf66097d0d10a61be810120fde51f976748b2b6e4264b51799e1ef994076df2be426d4' }
-    }).then(response => response.data.data[0].attributes)
-    .then(data => setLandingData(data))
-    .catch(error => console.log(error));
-    }
-
   const cardVariants = {
     offscreen: {
       opacity: 0,
