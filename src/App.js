@@ -6,6 +6,7 @@ import GetInTouch from './pages/GetInTouch';
 import OurServices from './pages/OurServicesPage';
 import ServiceDetailPage from './pages/ServiceDetailPage';
 import NotFoundPage from './pages/NotFoundPage';
+import PrivacyPage from './pages/PrivacyPage';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path='/getintouch' element={<GetInTouch />} />
         <Route path='/ourservices' element={<OurServices />} />
         <Route path='/ourservices/:service' element={<ServiceDetailPage />} />
+        <Route path='/privacy' element={<PrivacyPage />}/>
         <Route path="/notfound" element={<NotFoundPage />} />
         <Route path="*" element={<NotFoundPage />}/>
       </Routes>

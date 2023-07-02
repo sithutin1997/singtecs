@@ -29,7 +29,7 @@ const AboutUsLanding = () => {
         <h1 className='font-poppin-light font-bold text-5xl text-white mt-20 mb-20'>About Us</h1>
         <h2 className='font-poppin-bold text-lg xl:text-xl text-white mb-6'>Dedication to Success</h2>
         <p className='font-poppin-light text-md xl:text-lg text-white mb-6 w-full xl:w-2/3'>Improve efficiency, leverage tech, and provide better customer experiences with the modern technology services available all overthe world. Our skilled personnel, utilizing the latest processingsoftware, combined with decades of experience.</p>
-        <p className='font-poppin-bold font-thin text-sm text-white'>Co-Founder- Manoj Kumar Rai (CEO), Narmeet Singh (CTO)</p>
+        <p className='font-poppin-bold font-bold text-sm text-white'>Co-Founder- Manoj Kumar Rai (CEO), Narmeet Singh (CTO)</p>
       </div>
       <motion.div 
       initial="offscreen"
