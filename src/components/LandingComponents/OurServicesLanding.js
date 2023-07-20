@@ -25,8 +25,8 @@ const OurServicesLanding = () => {
       whileInView="onscreen"
       animate={{ opacity: 1 }}
       className='flex flex-col'>
-        <h1 className='font-poppin-book xl:font-bold xl:text-5xl mt-20 mb-6 xl:text-black text-white text-4xl'>Our Services</h1>
-          <p className='font-poppin-thin text-lg xl:w-2/5 w-full xl:text-black text-white font-medium'>Singtechnologies offers a wide range of consulting services to serve a variety of businesses and clients. Whether you’re a small, local business or a multinational corporation, we can help you reach new levels of success. Get in touch with us today to learn more about our services and what our team can do for you.</p>
+        <h1 className='font-poppin-book xl:font-bold xl:text-5xl mt-14 mb-6 xl:text-black text-white text-4xl'>Our Services</h1>
+          <p className='font-poppin-thin text-md xl:w-2/5 w-full xl:text-black text-white font-medium'>Singtechnologies offers a wide range of consulting services to serve a variety of businesses and clients. Whether you’re a small, local business or a multinational corporation, we can help you reach new levels of success. Get in touch with us today to learn more about our services and what our team can do for you.</p>
       </motion.div>
     )
   }

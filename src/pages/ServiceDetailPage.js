@@ -35,14 +35,14 @@ const ServiceDetailPage = () => {
   }
 
   const bgImage = {
-    custom : "bg-custom-service-page",
-    digital : "bg-digital-service-page",
-    cx : "bg-cx-service-page",
-    iot : "bg-iot-service-page",
-    cyber : "bg-cyber-service-page",
-    it : "bg-it-service-page",
-    enterprise : "bg-enterprise-service-page",
-    diet : "bg-diet-service-page"
+    custom : "bg-[url('/src/assets/custom-page.png')]",//"bg-custom-service-page",
+    digital : "bg-[url('/src/assets/digital-page.png')]",//"/src/assets/digital-page.png",//"bg-digital-service-page",
+    cx : "bg-[url('/src/assets/cx-page.png')]",//"/src/assets/cx-page.png",//"bg-cx-service-page",
+    iot : "bg-[url('/src/assets/iot-page.png')]",//"/src/assets/iot-page.png",//"bg-iot-service-page",
+    cyber : "bg-[url('/src/assets/cyber-page.png')]",//"/src/assets/cyber-page.png",//"bg-cyber-service-page",
+    it : "bg-[url('/src/assets/it-page.png')]",//"/src/assets/it-page.png",//"bg-it-service-page",
+    enterprise : "bg-[url('/src/assets/enterprise-page.png')]",//"/src/assets/enterprise-page.png",//"bg-enterprise-service-page",
+    diet : "bg-[url('/src/assets/diet-page.png')]"//"/src/assets/diet-page.png",//"bg-diet-service-page"
   }
 
   const detailHeader = {

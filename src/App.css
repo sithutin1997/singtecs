@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+
+  body:after{
+    display:none;
+    content: url('./assets/aboutus.png') url('./assets/gettouch.png') url('./assets/hero.jpg');
+}
+

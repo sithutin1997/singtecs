@@ -14,7 +14,7 @@ const GetInTouch = () => {
   const [bg,setBg] = useState(false)
   return (
     <div>
-      <div className={`bg-touch-image object-scale-down bg-cover xl:bg-auto bg-right-top bg-no-repeat h-[640px] px-6 lg:ps-14`}>
+      <div className={`bg-[url("/src/assets/gettouch.png")] object-scale-down bg-cover xl:bg-auto bg-right-top bg-no-repeat h-[640px] px-6 lg:ps-14`}>
         <Header setShow={backgroundBlur} />
         <Landing />
         

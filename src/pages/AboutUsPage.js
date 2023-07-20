@@ -17,7 +17,7 @@ const AboutUsPage = () => {
 
   return (
     <div>
-      <div className='bg-about-image bg-no-repeat px-6 lg:ps-14'>
+      <div className='bg-[url("/src/assets/aboutus.png")] bg-no-repeat px-6 lg:ps-14'>
         <Header setShow={backgroundBlur}/>
         <AboutUsLanding />
       </div>
